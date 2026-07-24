@@ -15,18 +15,22 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [pkgId, setPkgId] = useState(selectedPackageId);
+  const [selectedPkgIds, setSelectedPkgIds] = useState<string[]>([selectedPackageId || 'growth']);
   const [mentorChoice] = useState('Both Mentors (Recommended)');
 
   if (!isOpen) return null;
 
-  const currentPkg = packages.find(p => p.id === pkgId) || packages[1];
-
   const handleConfirm = (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = `Hi Sanchit & Syed Husna! My name is ${name} (${phone}).
-I want to enroll in the ${currentPkg.name} (${currentPkg.price}).
-Mentor Preference: ${mentorChoice}. Please reserve my 1-on-1 slot!`;
+    if (selectedPkgIds.length === 0) {
+      alert("Please select at least one package.");
+      return;
+    }
+
+    const selectedPackages = selectedPkgIds.map(id => packages.find(p => p.id === id)!);
+    const packageList = selectedPackages.map(p => `- ${p.name} (${p.price})`).join('\n');
+    
+    const msg = `Hi Sunchit & Syed Husna! My name is ${name} (${phone}).\nI want to enroll in the following packages:\n${packageList}\n\nMentor Preference: ${mentorChoice}. Please reserve my 1-on-1 slot!`;
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
@@ -55,7 +59,7 @@ Mentor Preference: ${mentorChoice}. Please reserve my 1-on-1 slot!`;
               Reserve Your Mentorship
             </h3>
             <p className="text-xs text-slate-600 font-medium mt-1">
-              Selected Tier: <strong className="text-amber-800 font-extrabold">{currentPkg.name} ({currentPkg.price})</strong>
+              Selected Tiers: <strong className="text-amber-800 font-extrabold">{selectedPkgIds.length > 0 ? selectedPkgIds.map(id => packages.find(p => p.id === id)?.name).join(', ') : 'None'}</strong>
             </p>
           </div>
 
@@ -89,29 +93,37 @@ Mentor Preference: ${mentorChoice}. Please reserve my 1-on-1 slot!`;
             </div>
 
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">
-                Select Package
+              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                Select Package(s)
               </label>
-              <select
-                value={pkgId}
-                onChange={(e) => setPkgId(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-amber-600"
-              >
-                {packages.map(p => (
-                  <option key={p.id} value={p.id}>{p.name} ({p.price})</option>
-                ))}
-              </select>
-            </div>
-
-            <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
-              <span className="text-[11px] font-bold text-slate-700 block">Package Includes:</span>
-              <ul className="space-y-1">
-                {currentPkg.features.slice(0, 3).map((f, i) => (
-                  <li key={i} className="text-[11px] text-slate-600 flex items-center gap-1.5 font-medium">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-600" /> {f}
-                  </li>
-                ))}
-              </ul>
+              <div className="space-y-2">
+                {packages.map(p => {
+                  const isSelected = selectedPkgIds.includes(p.id);
+                  return (
+                    <div 
+                      key={p.id}
+                      onClick={() => {
+                        if (isSelected) {
+                          setSelectedPkgIds(prev => prev.filter(id => id !== p.id));
+                        } else {
+                          setSelectedPkgIds(prev => [...prev, p.id]);
+                        }
+                      }}
+                      className={`w-full text-left p-3 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer transition-all gap-2 ${
+                        isSelected 
+                          ? 'border-amber-500 bg-amber-50' 
+                          : 'border-slate-200 bg-slate-50 hover:border-slate-300'
+                      }`}
+                    >
+                      <div className="flex-1 pr-4">
+                        <div className={`font-bold text-sm ${isSelected ? 'text-amber-900' : 'text-slate-900'}`}>{p.name}</div>
+                        <div className={`text-[11px] leading-snug mt-0.5 ${isSelected ? 'text-amber-700' : 'text-slate-500'}`}>{p.tagline}</div>
+                      </div>
+                      <div className={`font-extrabold text-sm whitespace-nowrap ${isSelected ? 'text-amber-700' : 'text-slate-900'}`}>{p.price}</div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             <button

@@ -15,6 +15,7 @@ import { FaqSection } from './components/FaqSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
+import { WebinarBooking } from './components/WebinarBooking';
 
 import { MobileBottomBar } from './components/MobileBottomBar';
 import { StickyCtaBar } from './components/StickyCtaBar';
@@ -58,11 +59,14 @@ export default function App() {
         {/* Featured Success Numbers */}
         <FeaturedStats />
 
-        {/* Meet Mentors (Sanchit Puri & Syed Husna Ali) */}
+        {/* Meet Mentors (Sunchit Puri & Syed Husna Ali) */}
         <MeetMentors onOpenBooking={() => handleOpenBooking()} />
 
         {/* Services Grid */}
         <ServicesGrid onOpenBooking={() => handleOpenBooking()} />
+
+        {/* Webinar Booking Section */}
+        <WebinarBooking />
 
         {/* Packages & Pricing */}
         <PackagesPricing onOpenBooking={handleOpenBooking} />

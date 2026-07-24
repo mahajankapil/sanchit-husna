@@ -33,11 +33,11 @@ export const StudentSuccessProof: React.FC = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-            Real Student <span className="text-amber-700">Success Stories</span>
+            Real People, Real <span className="text-amber-700">Dreams Achieved</span>
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-            Real WhatsApp conversations, verified income dashboards, and genuine student feedback. Click any proof screenshot to view in full detail.
+            See how we've helped students just like you overcome their fears and build the life they deserve. Click any proof screenshot to view in full detail.
           </p>
 
           {/* Filter Tabs */}
@@ -271,7 +271,7 @@ export const StudentSuccessProof: React.FC = () => {
 
               <div className="flex justify-end pt-2">
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi Sanchit & Syed, I saw ${selectedProof.studentName}'s success story (${selectedProof.headline}). I want to achieve similar results in mentorship!`)}`}
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi Sunchit & Syed, I saw ${selectedProof.studentName}'s success story (${selectedProof.headline}). I want to achieve similar results in mentorship!`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs flex items-center gap-2 shadow-sm"

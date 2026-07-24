@@ -67,7 +67,7 @@ export const FaqSection: React.FC = () => {
         <div className="mt-12 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm text-center flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left space-y-1">
             <h4 className="font-extrabold text-slate-900 text-base">Still have a specific question?</h4>
-            <p className="text-xs text-slate-500 font-medium">Message Sanchit & Syed Husna directly on WhatsApp for instant clarification.</p>
+            <p className="text-xs text-slate-500 font-medium">Message Sunchit & Syed Husna directly on WhatsApp for instant clarification.</p>
           </div>
 
           <a

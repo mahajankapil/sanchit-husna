@@ -49,7 +49,7 @@ export interface TestimonialProof {
   id: string;
   studentName: string;
   roleOrLocation: string;
-  mentor: 'Sanchit Puri' | 'Syed Husna Ali' | 'Both';
+  mentor: 'Sunchit Puri' | 'Syed Husna Ali' | 'Both';
   badge: string;
   headline: string;
   story: string;
@@ -72,7 +72,7 @@ export interface FAQItem {
   id: string;
   question: string;
   answer: string;
-  category: 'general' | 'packages' | 'sanchit' | 'syed';
+  category: 'general' | 'packages' | 'sunchit' | 'syed';
 }
 
 export interface GalleryItem {

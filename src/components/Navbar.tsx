@@ -22,6 +22,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, isDarkMode, toggl
   const navLinks = [
     { name: 'Mentors', href: '#mentors' },
     { name: 'Services', href: '#services' },
+    { name: 'Webinar', href: '#webinar' },
     { name: 'Roadmap', href: '#process' },
     { name: 'Proof', href: '#proof' },
     { name: 'Packages', href: '#packages' },
@@ -31,28 +32,27 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, isDarkMode, toggl
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-        scrolled 
-          ? isDarkMode 
-            ? 'py-3.5 bg-slate-900/90 backdrop-blur-xl border-b border-slate-800 shadow-lg' 
-            : 'py-3.5 bg-white/90 backdrop-blur-xl border-b border-slate-200/80 shadow-sm' 
-          : 'py-5 bg-transparent'
-      }`}
+    <header
+      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${scrolled
+        ? isDarkMode
+          ? 'py-3.5 bg-slate-900/90 backdrop-blur-xl border-b border-slate-800 shadow-lg'
+          : 'py-3.5 bg-white/90 backdrop-blur-xl border-b border-slate-200/80 shadow-sm'
+        : 'py-5 bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
+
           {/* Brand Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <img 
-              src="https://cwishlist.sirv.com/lofo.png" 
-              alt="Sanchit Puri Logo" 
-              className="w-10 h-10 object-contain rounded-md" 
+            <img
+              src="https://cwishlist.sirv.com/lofo.png"
+              alt="Sunchit Puri Logo"
+              className="w-10 h-10 object-contain rounded-md"
             />
             <div className="flex flex-col">
               <span className={`font-extrabold text-base sm:text-lg tracking-tight flex items-center gap-2 ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
-                SANCHIT PURI
+                spsha
               </span>
               <span className={`text-[11px] font-medium tracking-wide ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                 Executive Career Acceleration
@@ -61,9 +61,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, isDarkMode, toggl
           </a>
 
           {/* Desktop Links */}
-          <nav className={`hidden lg:flex items-center gap-8 px-8 py-2.5 ${
-            isDarkMode ? 'text-slate-300' : 'text-slate-700'
-          }`}>
+          <nav className={`hidden lg:flex items-center gap-8 px-8 py-2.5 ${isDarkMode ? 'text-slate-300' : 'text-slate-700'
+            }`}>
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -100,18 +99,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, isDarkMode, toggl
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className={`sm:hidden mt-3 mx-4 p-5 rounded-2xl border shadow-xl flex flex-col gap-4 ${
-          isDarkMode ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900'
-        }`}>
+        <div className={`sm:hidden mt-3 mx-4 p-5 rounded-2xl border shadow-xl flex flex-col gap-4 ${isDarkMode ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900'
+          }`}>
           <div className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-sm font-semibold py-2 border-b flex items-center justify-between ${
-                  isDarkMode ? 'border-slate-800 text-slate-200' : 'border-slate-100 text-slate-800'
-                }`}
+                className={`text-sm font-semibold py-2 border-b flex items-center justify-between ${isDarkMode ? 'border-slate-800 text-slate-200' : 'border-slate-100 text-slate-800'
+                  }`}
               >
                 <span>{link.name}</span>
                 <ArrowRight className="w-4 h-4 opacity-40" />

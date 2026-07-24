@@ -13,15 +13,15 @@ export const FeaturedStats: React.FC = () => {
     },
     {
       id: 2,
-      label: "Student Revenue Generated",
-      value: "₹1.5 Cr+",
+      label: "Dreams Funded",
+      value: "₹50 Lakhs+",
       subtext: "Collective Digital Earnings",
       icon: TrendingUp,
       bgColor: "bg-emerald-50 text-emerald-800 border-emerald-200"
     },
     {
       id: 3,
-      label: "Businesses Scaled",
+      label: "Lives Changed",
       value: "50+",
       subtext: "High-Ticket Client Acquisition",
       icon: Building2,
@@ -29,7 +29,7 @@ export const FeaturedStats: React.FC = () => {
     },
     {
       id: 4,
-      label: "Transformation Rate",
+      label: "Happy Students",
       value: "95%",
       subtext: "Successful Career Transitions",
       icon: Award,

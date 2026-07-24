@@ -1,12 +1,12 @@
 import { Mentor, Package, Service, TestimonialProof, TimelineStep, FAQItem, GalleryItem } from '../types';
 
-export const WHATSAPP_NUMBER = "919876543210"; // Official mentorship support hotline
-export const DEFAULT_WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello! I am interested in booking 1-on-1 mentorship with Sanchit Puri and Syed Husna Ali.")}`;
+export const WHATSAPP_NUMBER = "919811051676"; // Official mentorship support hotline
+export const DEFAULT_WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello! I am interested in booking 1-on-1 mentorship with Sunchit Puri and Syed Husna Ali.")}`;
 
 export const mentors: Mentor[] = [
   {
-    id: "sanchit-puri",
-    name: "Sanchit Puri",
+    id: "sunchit-puri",
+    name: "Sunchit Puri",
     title: "Digital Marketing & High-Income Growth Strategist",
     specialization: [
       "Affiliate Marketing",
@@ -23,13 +23,12 @@ export const mentors: Mentor[] = [
     ],
     experience: "6+ Years",
     studentsCount: "300+ Students Mentored",
-    bio: "Over 6 years of hands-on experience building multi-lakh digital campaigns, affiliate marketing engines, and client acquisition pipelines. Sanchit has directly empowered 300+ students and working professionals to scale high-income digital skills and achieve financial independence.",
+    bio: "Over 6 years of hands-on experience building multi-lakh digital campaigns, affiliate marketing engines, and client acquisition pipelines. Sunchit has directly empowered 300+ students and working professionals to scale high-income digital skills and achieve financial independence.",
     image: "https://cwishlist.sirv.com/sanchit.png",
     achievements: [
       "Mentored 300+ students to generate consistent online income",
       "Managed ₹50L+ in performance ad spend across industries",
-      "Helped 40+ freelancers build $2K+/month client retainers",
-      "Featured growth speaker & top performance strategist"
+      "Helped 40+ freelancers build $2K+/month client retainers"
     ],
     highlights: [
       "High-Converting Sales Funnels",
@@ -37,7 +36,7 @@ export const mentors: Mentor[] = [
       "Done-For-You Lead Gen Templates",
       "0 to 1 Lakh/Month Scaling Blueprint"
     ],
-    whatsappMessage: "Hi Sanchit, I want to join your High Income Mentorship Program. Please guide me on getting started!",
+    whatsappMessage: "Hi Sunchit, I want to join your High Income Mentorship Program. Please guide me on getting started!",
     whatsappNumber: "919811051676",
     socials: {
       instagram: "https://instagram.com",
@@ -89,15 +88,14 @@ export const packages: Package[] = [
     name: "Starter Mentorship",
     price: "₹4,999",
     originalPrice: "₹9,999",
-    tagline: "Essential kickstart for beginners wanting foundational clarity & direction.",
+    tagline: "Perfect if you're just starting out and need a friendly push in the right direction.",
     targetAudience: "College Students & Freshers looking for a clear high-income career path",
     duration: "1 Month Mentorship Access",
     features: [
       "1-on-1 Strategy Session with Mentor (60 Mins)",
       "Personalized Skill & Career Assessment Roadmap",
       "Foundations of Digital Marketing & Freelancing",
-      "Access to Core Resource & Funnel Templates",
-      "WhatsApp Group Support (Mon-Fri)",
+      "WhatsApp Community Support",
       "Certificate of Mentorship Completion"
     ],
     notIncluded: [
@@ -113,8 +111,8 @@ export const packages: Package[] = [
     name: "Growth Mentorship",
     price: "₹7,499",
     originalPrice: "₹14,999",
-    popular: true,
-    tagline: "Our most popular intensive program to build a ₹50K-₹1L/month skill stack.",
+    popular: false,
+    tagline: "A balanced program to help you build confidence and steady income with our direct help.",
     targetAudience: "Aspiring Marketers, Freelancers & Career Seekers wanting fast-track results",
     duration: "3 Months Intensive Mentorship",
     features: [
@@ -122,24 +120,24 @@ export const packages: Package[] = [
       "Full Affiliate & Digital Marketing Execution Blueprint",
       "High-Ticket Client Closing & Cold Outreach System",
       "Career Guidance & Resume/Portfolio Rebuild by Syed Husna",
-      "Weekly Live Accountability & Q&A Audits with Sanchit Puri",
+      "Weekly Live Accountability & Q&A Audits with Sunchit Puri",
       "Direct Priority WhatsApp Voice Note Access",
       "Proven Lead Generation Funnels & Ad Copies"
     ],
     whatsappMessage: "Hi! I want to enroll in the MOST POPULAR GROWTH Mentorship Package (₹7,499). Please reserve my spot!",
-    mentorTarget: "Sanchit Puri + Syed Husna Ali"
+    mentorTarget: "Sunchit Puri + Syed Husna Ali"
   },
   {
     id: "elite-vip",
     name: "Elite VIP Mentorship",
-    price: "₹12,999",
+    price: "₹14,999",
     originalPrice: "₹24,999",
-    tagline: "Ultra-exclusive 1-on-1 handholding until you achieve active scaling.",
+    popular: true,
+    tagline: "We become your personal career family, holding your hand every single step until you succeed.",
     targetAudience: "Serious individuals committed to building high-income businesses or career breakthroughs",
     duration: "6 Months Unlimited Support + Lifetime VIP Access",
     features: [
-      "Unlimited 1-on-1 Private Sessions (Bi-weekly scheduling)",
-      "Done-With-You Funnel & Brand Setup with Sanchit Puri",
+      "Done-With-You Funnel & Brand Setup with Sunchit Puri",
       "Full Personality & Leadership Development with Syed Husna Ali",
       "Custom Lead Generation & Ad Campaign Audit",
       "100% Guaranteed Portfolio & Resume Transformation",
@@ -147,7 +145,7 @@ export const packages: Package[] = [
       "Direct Emergency Call Access with Both Mentors",
       "Lifetime Access to All Future Updates & Content"
     ],
-    whatsappMessage: "Hi! I am ready to join the ELITE VIP Mentorship Package (₹12,999). I want personal 1-on-1 guidance from Sanchit & Syed Husna.",
+    whatsappMessage: "Hi! I am ready to join the ELITE VIP Mentorship Package (₹14,999). I want personal 1-on-1 guidance from Sunchit & Syed Husna.",
     mentorTarget: "VIP Dual Mentor Handholding"
   }
 ];
@@ -157,7 +155,7 @@ export const services: Service[] = [
     id: "digital-marketing",
     title: "Digital Marketing",
     category: "marketing",
-    mentorName: "Sanchit Puri",
+    mentorName: "Sunchit Puri",
     description: "Master modern multi-channel digital marketing, SEO, paid ads, and brand positioning that drives predictable revenue.",
     iconName: "Target",
     outcomes: ["Campaign Architecture", "Meta & Google Ads", "ROI Optimization"],
@@ -167,7 +165,7 @@ export const services: Service[] = [
     id: "affiliate-marketing",
     title: "Affiliate Marketing",
     category: "marketing",
-    mentorName: "Sanchit Puri",
+    mentorName: "Sunchit Puri",
     description: "Learn how to select high-paying affiliate offers, build automated conversion funnels, and generate passive organic/paid traffic.",
     iconName: "TrendingUp",
     outcomes: ["High Ticket Offer Selection", "Funnel Automation", "Traffic Generation"],
@@ -177,7 +175,7 @@ export const services: Service[] = [
     id: "freelancing",
     title: "Freelancing Mastery",
     category: "growth",
-    mentorName: "Sanchit Puri",
+    mentorName: "Sunchit Puri",
     description: "Position yourself as an elite freelancer, land high-ticket international clients, and charge ₹50K+ per retainer.",
     iconName: "Briefcase",
     outcomes: ["Cold Outreach Templates", "Pricing & Proposals", "Client Retainers"],
@@ -187,7 +185,7 @@ export const services: Service[] = [
     id: "lead-generation",
     title: "Lead Generation",
     category: "marketing",
-    mentorName: "Sanchit Puri",
+    mentorName: "Sunchit Puri",
     description: "Build scalable lead engines using organic content strategies, landing pages, and automated WhatsApp nurturing.",
     iconName: "Zap",
     outcomes: ["High Quality Lead Capture", "WhatsApp Automation", "Conversion Optimization"]
@@ -224,7 +222,7 @@ export const services: Service[] = [
     id: "business-scaling",
     title: "Business Scaling",
     category: "growth",
-    mentorName: "Sanchit Puri",
+    mentorName: "Sunchit Puri",
     description: "Scale your agency or digital offer from ₹1L to ₹5L+/month with streamlined delegation, SOPs, and systemized sales.",
     iconName: "BarChart3",
     outcomes: ["SOP Creation", "Team Delegation", "Revenue Multiplication"]
@@ -263,7 +261,7 @@ export const timelineSteps: TimelineStep[] = [
     stepNumber: 1,
     title: "Book 1-on-1 Discovery Session",
     subtitle: "Clarity First",
-    description: "Connect directly with Sanchit Puri or Syed Husna Ali via WhatsApp. We evaluate your current skill set, goals, and career bottlenecks.",
+    description: "Connect directly with Sunchit Puri or Syed Husna Ali via WhatsApp. We evaluate your current skill set, goals, and career bottlenecks.",
     icon: "CalendarCheck",
     deliverable: "Detailed 30-min Skill Audit & Action Plan"
   },
@@ -277,14 +275,6 @@ export const timelineSteps: TimelineStep[] = [
   },
   {
     stepNumber: 3,
-    title: "Hands-On Implementation",
-    subtitle: "Building the Foundation",
-    description: "Execute high-converting campaigns, build client proposals, optimize LinkedIn, or master affiliate funnels with direct mentor templates.",
-    icon: "Rocket",
-    deliverable: "Live Funnels, Portfolios & Outreach Engines"
-  },
-  {
-    stepNumber: 4,
     title: "Weekly Accountability & Audits",
     subtitle: "Course Correction",
     description: "Participate in weekly 1-on-1 feedback reviews. Mentors review your metrics, pitch scripts, and ad spend to fix errors in real-time.",
@@ -292,7 +282,7 @@ export const timelineSteps: TimelineStep[] = [
     deliverable: "Live Campaign Audits & Script Refinements"
   },
   {
-    stepNumber: 5,
+    stepNumber: 4,
     title: "Scalable Growth & Income",
     subtitle: "Financial & Career Breakthrough",
     description: "Celebrate hitting major milestones: landing your first $1,000 client, achieving ₹1 Lakh monthly affiliate revenue, or securing a top job offer.",
@@ -304,12 +294,12 @@ export const timelineSteps: TimelineStep[] = [
 export const studentProofs: TestimonialProof[] = [
   {
     id: "proof-1",
-    studentName: "Rohan Verma",
+    studentName: "Sunchit Puri",
     roleOrLocation: "Engineering Student, Delhi",
-    mentor: "Sanchit Puri",
+    mentor: "Sunchit Puri",
     badge: "₹1 Lakh Income Achieved",
     headline: "From Zero to ₹1.2 Lakhs in 45 Days with Affiliate Marketing",
-    story: "I had no background in marketing. Sanchit sir personally helped me build my traffic funnel and pick high-ticket digital offers. The weekly accountability kept me on track!",
+    story: "I had no background in marketing. Sunchit sir personally helped me build my traffic funnel and pick high-ticket digital offers. The weekly accountability kept me on track!",
     metric: "₹1,24,500 Generated",
     screenshotType: "income",
     imageUrl: "https://cwishlist.sirv.com/poster.png",
@@ -317,43 +307,43 @@ export const studentProofs: TestimonialProof[] = [
   },
   {
     id: "proof-2",
-    studentName: "Priya Sharma",
+    studentName: "Syed Husna",
     roleOrLocation: "BBA Graduate, Jaipur",
     mentor: "Syed Husna Ali",
     badge: "Career Transformation",
     headline: "Landed my Dream Product Associate Role with 85% Salary Hike",
-    story: "Syed Husna sir transformed my resume and taught me structured interview techniques. His mock interview session gave me the exact confidence needed to crack 3 job offers!",
+    story: "Syed Husna ma'am transformed my resume and taught me structured interview techniques. Her mock interview session gave me the exact confidence needed to crack 3 job offers!",
     metric: "85% Salary Jump",
     screenshotType: "feedback",
     imageUrl: "https://cwishlist.sirv.com/poster2.png",
     date: "3 Weeks Ago"
   },
-  {
-    id: "proof-3",
-    studentName: "Aman Gupta",
-    roleOrLocation: "Freelance Media Buyer, Mumbai",
-    mentor: "Sanchit Puri",
-    badge: "10x ROI",
-    headline: "Closed 3 US Clients paying $1,500/month each",
-    story: "Sanchit Puri's cold LinkedIn outreach script and retainer pricing strategy changed everything for my freelance agency. The Elite VIP package was my best investment ever.",
-    metric: "$4,500/Mo Retainer",
-    screenshotType: "dashboard",
-    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    date: "1 Month Ago"
-  },
-  {
-    id: "proof-4",
-    studentName: "Ananya Mehta",
-    roleOrLocation: "Digital Marketer, Bangalore",
-    mentor: "Both",
-    badge: "Student Success",
-    headline: "Scaled My Lead Gen Business to ₹2.5 Lakhs/Month",
-    story: "Combining Sanchit's lead generation mastery with Syed Husna's negotiation and communication coaching gave me the ultimate competitive edge in the market.",
-    metric: "₹2,50,000/Month",
-    screenshotType: "whatsapp",
-    imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
-    date: "2 Weeks Ago"
-  }
+  // {
+  //   id: "proof-3",
+  //   studentName: "Aman Gupta",
+  //   roleOrLocation: "Freelance Media Buyer, Mumbai",
+  //   mentor: "Sunchit Puri",
+  //   badge: "10x ROI",
+  //   headline: "More than 10+ international clients closed",
+  //   story: "Sunchit Puri's cold LinkedIn outreach script and retainer pricing strategy changed everything for my freelance agency. The Elite VIP package was my best investment ever.",
+  //   metric: "$4,500/Mo Retainer",
+  //   screenshotType: "dashboard",
+  //   imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+  //   date: "1 Month Ago"
+  // },
+  // {
+  //   id: "proof-4",
+  //   studentName: "Ananya Mehta",
+  //   roleOrLocation: "Digital Marketer, Bangalore",
+  //   mentor: "Both",
+  //   badge: "Student Success",
+  //   headline: "Scaled My Lead Gen Business to ₹2.5 Lakhs/Month",
+  //   story: "Combining Sunchit's lead generation mastery with Syed Husna's negotiation and communication coaching gave me the ultimate competitive edge in the market.",
+  //   metric: "₹2,50,000/Month",
+  //   screenshotType: "whatsapp",
+  //   imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+  //   date: "2 Weeks Ago"
+  // }
 ];
 
 export const galleryItems: GalleryItem[] = [
@@ -362,7 +352,7 @@ export const galleryItems: GalleryItem[] = [
     title: "1-on-1 Intensive Strategy Session",
     category: "training",
     imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1000",
-    description: "Sanchit Puri conducting a deep-dive ad campaign & sales funnel audit with student Rohan.",
+    description: "Sunchit Puri conducting a deep-dive ad campaign & sales funnel audit with student Rohan.",
     date: "2026"
   },
   {
@@ -395,13 +385,13 @@ export const faqItems: FAQItem[] = [
   {
     id: "faq-1",
     question: "Who is this mentorship program designed for?",
-    answer: "This mentorship is ideal for college students, fresh graduates, job seekers, aspiring freelancers, and digital entrepreneurs who want hands-on, 1-on-1 guidance to build high-income skills, scale affiliate marketing, or accelerate their corporate career growth.",
+    answer: "This mentorship is ideal for college students, fresh graduates, job seekers, aspiring freelancers, digital entrepreneurs, housewives, business persons, unemployed individuals, working professionals, and beginners who want hands-on, 1-on-1 guidance to build high-income skills, scale affiliate marketing, or accelerate their corporate career growth.",
     category: "general"
   },
   {
     id: "faq-2",
     question: "Do I need prior experience in marketing or business?",
-    answer: "No prior technical or marketing experience is required. Both Sanchit Puri and Syed Husna Ali start with fundamental principles and guide you step-by-step through practical execution templates.",
+    answer: "No prior technical or marketing experience is required. Both Sunchit Puri and Syed Husna Ali start with fundamental principles and guide you step-by-step through practical execution templates.",
     category: "general"
   },
   {
@@ -412,8 +402,8 @@ export const faqItems: FAQItem[] = [
   },
   {
     id: "faq-4",
-    question: "What is the difference between Sanchit Puri and Syed Husna Ali's mentorship?",
-    answer: "Sanchit Puri specializes in Affiliate Marketing, Digital Ad Campaigns, Freelancing, Lead Generation, and Business Scaling. Syed Husna Ali specializes in Career Counselling, Interview Preparation, Personality Development, and Strategic Career Planning. In our Growth and Elite VIP packages, you get equal access to BOTH mentors!",
+    question: "What is the difference between Sunchit Puri and Syed Husna Ali's mentorship?",
+    answer: "Sunchit Puri specializes in Affiliate Marketing, Digital Ad Campaigns, Freelancing, Lead Generation, and Business Scaling. Syed Husna Ali specializes in Career Counselling, Interview Preparation, Personality Development, and Strategic Career Planning. In our Growth and Elite VIP packages, you get equal access to BOTH mentors!",
     category: "general"
   },
   {

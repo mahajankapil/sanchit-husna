@@ -29,7 +29,7 @@ export const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onOpenBooking }) => 
     <div className="hidden lg:flex fixed top-20 left-1/2 -translate-x-1/2 z-30 bg-white/95 backdrop-blur-md px-6 py-2.5 rounded-full border border-slate-200 shadow-xl items-center gap-6 animate-in slide-in-from-top-4 duration-300">
       <div className="flex items-center gap-2 text-xs font-bold text-slate-900">
 
-        <span>1-on-1 Mentorship Slots Open for Sanchit & Syed Husna</span>
+        <span>1-on-1 Mentorship Slots Open for Sunchit & Syed Husna</span>
       </div>
 
       <div className="flex items-center gap-3">

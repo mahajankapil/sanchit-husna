@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
                 SH
               </div>
               <span className="font-extrabold text-lg tracking-tight text-white">
-                SANCHIT PURI & SYED HUSNA ALI
+                SUNCHIT PURI & SYED HUSNA ALI
               </span>
             </div>
 
@@ -72,7 +72,7 @@ export const Footer: React.FC = () => {
         {/* Footer Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
           <div>
-            © {new Date().getFullYear()} Sanchit Puri & Syed Husna Ali. All rights reserved.
+            © {new Date().getFullYear()} Sunchit Puri & Syed Husna Ali. All rights reserved.
           </div>
 
           <div className="flex items-center gap-6">

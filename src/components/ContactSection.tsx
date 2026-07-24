@@ -17,7 +17,7 @@ export const ContactSection: React.FC = () => {
     e.preventDefault();
     setSubmitted(true);
 
-    const waMsg = `Hi Sanchit & Syed Husna! My name is ${formData.name} (${formData.phone}).
+    const waMsg = `Hi Sunchit & Syed Husna! My name is ${formData.name} (${formData.phone}).
 Target Goal: ${formData.goal}
 Preferred Mentor: ${formData.preferredMentor}
 Message: ${formData.message || 'I want to book my mentorship session.'}`;
@@ -62,7 +62,7 @@ Message: ${formData.message || 'I want to book my mentorship session.'}`;
               </h3>
 
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
-                Skip the waiting time. Get direct 1-on-1 response from Sanchit Puri or Syed Husna Ali's team right now.
+                Skip the waiting time. Get direct 1-on-1 response from Sunchit Puri or Syed Husna Ali's team right now.
               </p>
 
               <a
@@ -210,7 +210,7 @@ Message: ${formData.message || 'I want to book my mentorship session.'}`;
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs text-slate-900 focus:outline-none focus:border-amber-600"
                     >
                       <option>Both Mentors (Recommended)</option>
-                      <option>Sanchit Puri (Digital & Affiliate)</option>
+                      <option>Sunchit Puri (Digital & Affiliate)</option>
                       <option>Syed Husna Ali (Career Guidance)</option>
                     </select>
                   </div>

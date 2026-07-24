@@ -16,7 +16,7 @@ export const WhatsAppFloatButton: React.FC = () => {
   };
 
   const quickPrompts = [
-    "Hi Sanchit! I want to ask about Affiliate Marketing mentorship.",
+    "Hi Sunchit! I want to ask about Affiliate Marketing mentorship.",
     "Hi Syed Husna! I need Career Guidance & Counselling.",
     "Which mentorship package is best for a complete beginner?",
     "Can I book a 1-on-1 discovery call today?"
@@ -36,7 +36,7 @@ export const WhatsAppFloatButton: React.FC = () => {
                 <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 border-2 border-white rounded-full" />
               </div>
               <div>
-                <h4 className="font-extrabold text-xs text-slate-900">Sanchit & Syed Husna</h4>
+                <h4 className="font-extrabold text-xs text-slate-900">Sunchit & Syed Husna</h4>
                 <span className="text-[10px] text-emerald-700 font-bold">Online • Instant Support</span>
               </div>
             </div>

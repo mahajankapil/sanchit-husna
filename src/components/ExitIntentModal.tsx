@@ -53,7 +53,7 @@ export const ExitIntentModal: React.FC = () => {
             Before You Go! Claim a Free <span className="text-amber-700">15-Min Strategy Session</span>
           </h3>
           <p className="text-xs text-slate-600 leading-relaxed font-medium">
-            Get a complimentary 1-on-1 skill evaluation & custom career roadmap PDF directly from Sanchit Puri & Syed Husna Ali.
+            Get a complimentary 1-on-1 skill evaluation & custom career roadmap PDF directly from Sunchit Puri & Syed Husna Ali.
           </p>
         </div>
 

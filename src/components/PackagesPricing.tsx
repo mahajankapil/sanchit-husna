@@ -30,11 +30,11 @@ export const PackagesPricing: React.FC<PackagesPricingProps> = ({ onOpenBooking 
 
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-            Select Your <span className="text-amber-700">Mentorship Package</span>
+            Choose the Journey That <span className="text-amber-700">Fits You Best</span>
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-            Transparent pricing with 100% practical, 1-on-1 handholding. Choose the tier that matches your career or revenue goals.
+            We're here to help you grow, step by step. Choose the level of personal support and guidance you need to reach your goals.
           </p>
 
           {/* Comparison Toggle */}
@@ -52,22 +52,22 @@ export const PackagesPricing: React.FC<PackagesPricingProps> = ({ onOpenBooking 
               <div
                 key={pkg.id}
                 className={`rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 relative group bg-white border ${
-                  isGrowth 
+                  isElite 
                     ? 'border-2 border-amber-500 shadow-xl scale-100 lg:-translate-y-3 z-20' 
                     : 'border-slate-200 shadow-sm hover:shadow-md'
                 }`}
               >
                 {/* Highlight Ribbon */}
-                {isGrowth && (
+                {isElite && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-slate-900 text-amber-400 font-extrabold text-xs uppercase tracking-wider shadow-md flex items-center gap-1">
                     <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                     MOST POPULAR CHOICE
                   </div>
                 )}
 
-                {isElite && (
+                {isGrowth && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-amber-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-md">
-                    VIP 1-ON-1 HANDHOLDING
+                    ACCELERATED GROWTH
                   </div>
                 )}
 
@@ -133,7 +133,7 @@ export const PackagesPricing: React.FC<PackagesPricingProps> = ({ onOpenBooking 
                   <button
                     onClick={() => handleSelectPackage(pkg.id, pkg.name, pkg.price)}
                     className={`w-full py-3.5 rounded-xl font-extrabold text-xs text-center flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer ${
-                      isGrowth
+                      isElite
                         ? 'bg-slate-900 hover:bg-slate-800 text-white shadow-slate-900/10'
                         : 'bg-slate-900 hover:bg-slate-800 text-white'
                     }`}
@@ -173,7 +173,7 @@ export const PackagesPricing: React.FC<PackagesPricingProps> = ({ onOpenBooking 
                   <th className="py-3 px-4">Feature / Deliverable</th>
                   <th className="py-3 px-4">Starter (₹4,999)</th>
                   <th className="py-3 px-4 text-amber-800 font-extrabold">Growth (₹7,499)</th>
-                  <th className="py-3 px-4">Elite VIP (₹12,999)</th>
+                  <th className="py-3 px-4">Elite VIP (₹14,999)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-700">
@@ -184,7 +184,7 @@ export const PackagesPricing: React.FC<PackagesPricingProps> = ({ onOpenBooking 
                   <td className="py-3 px-4 font-bold text-emerald-700">Unlimited / Bi-Weekly</td>
                 </tr>
                 <tr>
-                  <td className="py-3 px-4 font-semibold">Dual Mentor Access (Sanchit + Syed)</td>
+                  <td className="py-3 px-4 font-semibold">Dual Mentor Access (Sunchit + Syed)</td>
                   <td className="py-3 px-4">Choice of 1 Mentor</td>
                   <td className="py-3 px-4 font-bold text-amber-900">Both Mentors Included</td>
                   <td className="py-3 px-4 font-bold text-emerald-700">Both Mentors + VIP Group</td>

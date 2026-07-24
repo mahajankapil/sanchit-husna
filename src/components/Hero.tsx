@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MessageSquare, Sparkles, ShieldCheck, Trophy, ArrowUpRight, CheckCircle2, Star, Award } from 'lucide-react';
 import { DEFAULT_WHATSAPP_LINK, mentors } from '../data/mentorshipData';
 
@@ -8,12 +8,44 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
   const [activeMentorIndex, setActiveMentorIndex] = useState(0);
+  const [audienceIndex, setAudienceIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
   const currentMentor = mentors[activeMentorIndex];
+  const audiences = ["Students", "Job Persons", "Business Persons", "Working Professionals", "Unemployed"];
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+    const currentWord = audiences[audienceIndex];
+
+    if (isDeleting) {
+      if (displayText.length === 0) {
+        setIsDeleting(false);
+        setAudienceIndex((prev) => (prev + 1) % audiences.length);
+      } else {
+        timeout = setTimeout(() => {
+          setDisplayText(currentWord.substring(0, displayText.length - 1));
+        }, 50); // fast delete
+      }
+    } else {
+      if (displayText === currentWord) {
+        timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2000); // pause at full word
+      } else {
+        timeout = setTimeout(() => {
+          setDisplayText(currentWord.substring(0, displayText.length + 1));
+        }, 100); // typing speed
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, audienceIndex]);
 
   return (
     <section className="relative min-h-[90vh] pt-28 pb-16 md:pt-36 md:pb-24 flex items-center bg-[#F8FAFC]">
       {/* Subtle background grid pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `radial-gradient(#0F172A 1px, transparent 1px)`,
@@ -23,44 +55,42 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Heading & Key Actions */}
           <div className="lg:col-span-7 flex flex-col gap-6 text-left">
-            
+
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
-              Helping Students Build <br />
+              Helping <span className="text-amber-600 border-r-2 border-amber-600 pr-1 animate-[pulse_1s_infinite]">{displayText}</span> <br />
               <span className="text-amber-700 underline decoration-amber-300 decoration-wavy decoration-2 underline-offset-8">
-                High-Income Careers
+                Build a Life of Freedom & Success
               </span>
             </h1>
 
             {/* Subheading */}
             <p className="hidden md:block text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed font-normal">
-              Direct, hands-on guidance from two industry leaders—<strong className="text-slate-900 font-semibold">Sanchit Puri</strong> (Affiliate Marketing & Business Scaling) and <strong className="text-slate-900 font-semibold">Syed Husna Ali</strong> (Career Counselling & Leadership). Transform your skills into predictable, sustainable earnings.
+              We personally hold your hand on your journey to success. Let <strong className="text-slate-900 font-semibold">Sunchit Puri</strong> and <strong className="text-slate-900 font-semibold">Syed Husna Ali</strong> guide you step-by-step from confusion to confidence, so you can achieve the life you've always dreamed of.
             </p>
 
             {/* Dual Mentor Selector Tabs */}
             <div className="flex flex-wrap items-center gap-3 pt-1">
               <button
                 onClick={() => setActiveMentorIndex(0)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all cursor-pointer ${
-                  activeMentorIndex === 0 
-                    ? 'bg-slate-900 text-white shadow-md' 
-                    : 'bg-white border border-slate-200 text-slate-700 hover:border-slate-300 shadow-xs'
-                }`}
+                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all cursor-pointer ${activeMentorIndex === 0
+                  ? 'bg-slate-900 text-white shadow-md'
+                  : 'bg-white border border-slate-200 text-slate-700 hover:border-slate-300 shadow-xs'
+                  }`}
               >
                 <span className="w-2 h-2 rounded-full bg-amber-400" />
-                Sanchit Puri (Digital & Affiliate)
+                Sunchit Puri (Digital & Affiliate)
               </button>
               <button
                 onClick={() => setActiveMentorIndex(1)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all cursor-pointer ${
-                  activeMentorIndex === 1 
-                    ? 'bg-slate-900 text-white shadow-md' 
-                    : 'bg-white border border-slate-200 text-slate-700 hover:border-slate-300 shadow-xs'
-                }`}
+                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all cursor-pointer ${activeMentorIndex === 1
+                  ? 'bg-slate-900 text-white shadow-md'
+                  : 'bg-white border border-slate-200 text-slate-700 hover:border-slate-300 shadow-xs'
+                  }`}
               >
                 <span className="w-2 h-2 rounded-full bg-amber-400" />
                 Syed Husna Ali (Career Guidance)
@@ -97,21 +127,21 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 <span className="text-lg sm:text-2xl font-black text-slate-900 flex flex-wrap items-baseline gap-1">
                   6+ <span className="text-amber-600 text-[10px] sm:text-base font-bold leading-none">Years</span>
                 </span>
-                <span className="text-[9px] sm:text-xs text-slate-500 font-semibold leading-tight mt-0.5">Track Record</span>
+                <span className="text-[9px] sm:text-xs text-slate-500 font-semibold leading-tight mt-0.5">Years of Changing Lives</span>
               </div>
 
               <div className="flex flex-col">
                 <span className="text-lg sm:text-2xl font-black text-slate-900 flex flex-wrap items-baseline gap-1">
                   300+ <span className="text-amber-600 text-[10px] sm:text-base font-bold leading-none">Mentees</span>
                 </span>
-                <span className="text-[9px] sm:text-xs text-slate-500 font-semibold leading-tight mt-0.5">Guided Directly</span>
+                <span className="text-[9px] sm:text-xs text-slate-500 font-semibold leading-tight mt-0.5">Lives Transformed</span>
               </div>
 
               <div className="flex flex-col">
                 <span className="text-lg sm:text-2xl font-black text-slate-900 flex flex-wrap items-baseline gap-1">
                   95% <span className="text-emerald-600 text-[10px] sm:text-base font-bold leading-none">Success</span>
                 </span>
-                <span className="text-[9px] sm:text-xs text-slate-500 font-semibold leading-tight mt-0.5">Career Outcome</span>
+                <span className="text-[9px] sm:text-xs text-slate-500 font-semibold leading-tight mt-0.5">Success Rate</span>
               </div>
             </div>
 
@@ -119,7 +149,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
 
           {/* Right Column: Pristine Photo Card Frame */}
           <div className="lg:col-span-5 relative flex justify-center">
-            
+
             <div className="relative w-full max-w-md rounded-3xl p-3 bg-white border border-slate-200 shadow-xl group">
               <div className="relative rounded-2xl overflow-hidden bg-slate-100">
                 <img
