@@ -22,7 +22,7 @@ import { StickyCtaBar } from './components/StickyCtaBar';
 
 export default function App() {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  const [selectedPackageId, setSelectedPackageId] = useState<string>('growth');
+  const [selectedPackageId, setSelectedPackageId] = useState<string>('elite-vip');
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {
@@ -32,6 +32,8 @@ export default function App() {
   const handleOpenBooking = (packageId?: string) => {
     if (packageId) {
       setSelectedPackageId(packageId);
+    } else {
+      setSelectedPackageId('elite-vip');
     }
     setBookingModalOpen(true);
   };

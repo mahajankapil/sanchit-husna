@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="flex items-center gap-3 pt-2">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-amber-400 transition-colors">
+              <a href="https://www.instagram.com/grow_with_sunchit?igsh=MTNyM2FmbGtycHkxOQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-amber-400 transition-colors">
                 <Instagram className="w-4 h-4" />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-amber-400 transition-colors">

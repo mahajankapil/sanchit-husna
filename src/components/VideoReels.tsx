@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { VolumeX, Volume2, Play, Pause } from 'lucide-react';
 
-const Reel = ({ src }: { src: string }) => {
+const Reel = ({ src, tag }: { src: string, tag?: string }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -65,13 +65,13 @@ const Reel = ({ src }: { src: string }) => {
       </div>
 
       <div 
-        className="absolute bottom-3 right-3 bg-black/50 p-1.5 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-black/70"
+        className="absolute bottom-3 right-3 bg-black/50 p-1.5 rounded-full text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity z-10 hover:bg-black/70"
         onClick={toggleMute}
       >
         {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
       </div>
       <div className="absolute top-3 left-3 bg-amber-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide z-10 shadow-md">
-        Client Feedback
+        {tag || "Client Feedback"}
       </div>
     </div>
   );
@@ -79,12 +79,12 @@ const Reel = ({ src }: { src: string }) => {
 
 export const VideoReels: React.FC = () => {
   const reels = [
-    '/vid.mp4',
-    '/vid2.mp4',
-    '/vid3.mp4',
-    '/vid4.mp4',
-    '/vid5.mp4',
-    '/vid6.mp4'
+    { src: '/vid.mp4', tag: 'Client Feedback' },
+    { src: '/vid2.mp4', tag: 'Client Feedback' },
+    { src: '/vid3.mp4', tag: 'Manager Feedback' },
+    { src: '/vid4.mp4', tag: 'Manager Feedback' },
+    { src: '/vid5.mp4', tag: 'Manager Feedback' },
+    { src: '/vid6.mp4', tag: 'Manager Feedback' }
   ];
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -153,9 +153,9 @@ export const VideoReels: React.FC = () => {
           className={`flex gap-4 sm:gap-6 overflow-x-auto pb-8 snap-x select-none ${isDragging ? 'cursor-grabbing snap-none' : 'cursor-grab snap-mandatory'}`} 
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {reels.map((src, i) => (
+          {reels.map((item, i) => (
             <div key={i} className="flex-shrink-0 snap-center first:pl-4 last:pr-4 sm:first:pl-0 sm:last:pr-0">
-              <Reel src={src} />
+              <Reel src={item.src} tag={item.tag} />
             </div>
           ))}
         </div>

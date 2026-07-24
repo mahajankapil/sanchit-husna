@@ -24,11 +24,11 @@ export const GallerySection: React.FC = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-            Mentorship in <span className="text-amber-700">Action</span>
+            Verified <span className="text-amber-700">Proofs</span>
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-            Snapshots of our live 1-on-1 strategy calls, university keynote workshops, student masterminds, and milestone award ceremonies.
+            Real screenshots and proofs from our successful students.
           </p>
 
           {/* Filters */}
@@ -94,11 +94,11 @@ export const GallerySection: React.FC = () => {
               onClick={() => setSelectedPhoto(item)}
               className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 transition-all duration-300 group cursor-pointer relative shadow-xs hover:shadow-md"
             >
-              <div className="relative h-64 overflow-hidden bg-slate-900">
+              <div className="relative h-80 overflow-hidden bg-slate-900">
                 <img
                   src={item.imageUrl}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />

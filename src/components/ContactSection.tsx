@@ -80,20 +80,33 @@ Message: ${formData.message || 'I want to book my mentorship session.'}`;
             <div className="space-y-3">
               
               <a
-                href="tel:+919876543210"
+                href="tel:+918595851676"
                 className="bg-white p-4 rounded-2xl border border-slate-200 hover:border-slate-300 transition-all flex items-center gap-4 shadow-xs"
               >
                 <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-800 flex items-center justify-center border border-amber-200">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-slate-400 uppercase block">Phone Hotline</span>
-                  <span className="text-sm font-bold text-slate-900">+91 98765 43210</span>
+                  <span className="text-[10px] font-bold text-slate-400 uppercase block">Primary Hotline</span>
+                  <span className="text-sm font-bold text-slate-900">+91 85958 51676</span>
                 </div>
               </a>
 
               <a
-                href="mailto:contact@mentorshipplatform.com"
+                href="tel:+918887986651"
+                className="bg-white p-4 rounded-2xl border border-slate-200 hover:border-slate-300 transition-all flex items-center gap-4 shadow-xs"
+              >
+                <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-800 flex items-center justify-center border border-amber-200">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold text-slate-400 uppercase block">Secondary Hotline</span>
+                  <span className="text-sm font-bold text-slate-900">+91 88879 86651</span>
+                </div>
+              </a>
+
+              <a
+                href="mailto:mentorship@sp-sha.com"
                 className="bg-white p-4 rounded-2xl border border-slate-200 hover:border-slate-300 transition-all flex items-center gap-4 shadow-xs"
               >
                 <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-800 flex items-center justify-center border border-amber-200">
@@ -113,7 +126,7 @@ Message: ${formData.message || 'I want to book my mentorship session.'}`;
                 Follow Mentors on Social Media:
               </span>
               <div className="flex items-center gap-3">
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-amber-700 hover:border-slate-300 transition-all shadow-xs">
+                <a href="https://www.instagram.com/grow_with_sunchit?igsh=MTNyM2FmbGtycHkxOQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-amber-700 hover:border-slate-300 transition-all shadow-xs">
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-amber-700 hover:border-slate-300 transition-all shadow-xs">
@@ -123,16 +136,6 @@ Message: ${formData.message || 'I want to book my mentorship session.'}`;
                   <Youtube className="w-5 h-5" />
                 </a>
               </div>
-            </div>
-
-            {/* Location Card */}
-            <div className="bg-white p-4 rounded-2xl border border-slate-200 space-y-2 shadow-xs">
-              <div className="flex items-center gap-2 text-xs font-bold text-slate-900">
-                <MapPin className="w-4 h-4 text-amber-600" /> Headquarter Locations:
-              </div>
-              <p className="text-xs text-slate-600 font-medium">
-                Delhi NCR & Mumbai Corporate Hub, India (In-person Workshops & Worldwide Online Sessions).
-              </p>
             </div>
 
           </div>

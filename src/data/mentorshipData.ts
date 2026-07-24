@@ -349,33 +349,33 @@ export const studentProofs: TestimonialProof[] = [
 export const galleryItems: GalleryItem[] = [
   {
     id: "gal-1",
-    title: "1-on-1 Intensive Strategy Session",
+    title: "Earnings Insights Dashboard",
     category: "training",
-    imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1000",
+    imageUrl: "https://kapilmkapil.sirv.com/CHIRAG/NCR/WhatsApp%20Image%202026-07-24%20at%2010.47.37%20PM.jpeg",
     description: "Sunchit Puri conducting a deep-dive ad campaign & sales funnel audit with student Rohan.",
     date: "2026"
   },
   {
     id: "gal-2",
-    title: "Keynote Career Seminar with Syed Husna Ali",
+    title: "Student WhatsApp Success",
     category: "speaking",
-    imageUrl: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1000",
+    imageUrl: "https://kapilmkapil.sirv.com/CHIRAG/NCR/WhatsApp%20Image%202026-07-24%20at%2010.47.37%20PM%20(1).jpeg",
     description: "Syed Husna Ali delivering a masterclass on 'Future-Proof Careers & High Income Skills' to 200+ students.",
     date: "2026"
   },
   {
     id: "gal-3",
-    title: "Annual Mentorship Student Meetup",
+    title: "1,00,000 INR Milestone",
     category: "students",
-    imageUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1000",
+    imageUrl: "https://kapilmkapil.sirv.com/CHIRAG/NCR/WhatsApp%20Image%202026-07-24%20at%2010.47.38%20PM.jpeg",
     description: "Celebrating ₹1 Crore+ collective student revenue milestone at our offline mastermind retreat.",
     date: "2025"
   },
   {
     id: "gal-4",
-    title: "Top Growth Mentor Excellence Award",
+    title: "Earnings by Dates",
     category: "achievements",
-    imageUrl: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&q=80&w=1000",
+    imageUrl: "https://kapilmkapil.sirv.com/CHIRAG/NCR/WhatsApp%20Image%202026-07-24%20at%2010.47.38%20PM%20(1).jpeg",
     description: "Recognized among top performance marketing mentors for student career impact.",
     date: "2025"
   }

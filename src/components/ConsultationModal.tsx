@@ -11,11 +11,11 @@ interface ConsultationModalProps {
 export const ConsultationModal: React.FC<ConsultationModalProps> = ({
   isOpen,
   onClose,
-  selectedPackageId = 'growth'
+  selectedPackageId = 'elite-vip'
 }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [selectedPkgIds, setSelectedPkgIds] = useState<string[]>([selectedPackageId || 'growth']);
+  const [selectedPkgIds, setSelectedPkgIds] = useState<string[]>([selectedPackageId || 'elite-vip']);
   const [mentorChoice] = useState('Both Mentors (Recommended)');
 
   if (!isOpen) return null;
